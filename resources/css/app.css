@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .modal {
+        @apply flex justify-center fixed top-0 left-0 w-full h-full
+    }
+    .modal-overlay {
+        @apply absolute top-0 z-40 left-0 w-full h-full
+    }
+    .modal-content {
+        @apply relative w-full sm:w-6/12 md:w-4/12 bg-white text-black md:rounded-lg overflow-y-scroll
+    }
+}
+
+.input {
+    box-shadow: inset 1px 1px 3px 0 rgb(0 0 0 / 35%);
+    border: 0.5px solid #ababab;
+    background-color: #fafafa;
+}
+
+.box {
+    height: 350px;
+    width: 350px;
+    position: relative;
+    background: #ebebeb;
+    border-radius: 1000px;
+    overflow: hidden;
+    z-index: 1;
+}
+.box .percent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+.box .percent .percent-text {
+    background-color: #00000059;
+    line-height: 100%;
+    padding: 5px 10px;
+    border-radius: 100px;
+}
+.box .water {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    transform: translate(0, 100%);
+    background: #c28646;
+    transition: all 0.3s;
+}
+.box .water_wave {
+    width: 200%;
+    position: absolute;
+    bottom: 100%;
+}
+.box .water_wave_back {
+    right: 0;
+    fill: #9b5c1e;
+    animation: wave-back 3s infinite linear;
+}
+.box .water_wave_front {
+    left: 0;
+    fill: #c28646;
+    margin-bottom: -1px;
+    animation: wave-front 2s infinite linear;
+}
+@keyframes wave-front {
+    100% {
+        transform: translate(-50%, 0);
+    }
+}
+@keyframes wave-back {
+    100% {
+        transform: translate(50%, 0);
+    }
+}
+

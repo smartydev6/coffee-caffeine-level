@@ -1,0 +1,14 @@
+{
+  "resources/app.tsx": {
+    "file": "assets/app.2b046321.js",
+    "src": "resources/app.tsx",
+    "isEntry": true,
+    "css": [
+      "assets/app.2e8dfaef.css"
+    ]
+  },
+  "resources/app.css": {
+    "file": "assets/app.2e8dfaef.css",
+    "src": "resources/app.css"
+  }
+}
